@@ -5,7 +5,7 @@
     :key="index.id"
     @click="$router.push('/PostPage/' + index.id)">
     <div class="news_img">
-      <img :src="index.image" />
+      <img :src="require('@/views/news/img/news/' + index.image)" />
     </div>
     <div class="news_text">
       <strong>{{ index.title }}</strong>

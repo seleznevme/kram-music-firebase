@@ -7,7 +7,7 @@
         </span>
       </div>
       <div class="post_image">
-        <img :src="$store.state.posts.post_list.find((item) => item.id == $route.params.id)?.image"/>
+        <img :src="require('@/views/news/img/news/' + $store.state.posts.post_list.find((item) => item.id == $route.params.id)?.image)"/>
       </div>
       <div class="post_body">
         <span>
