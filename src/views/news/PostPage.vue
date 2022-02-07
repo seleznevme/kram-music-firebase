@@ -14,6 +14,11 @@
           {{$store.state.posts.post_list.find((item) => item.id == $route.params.id)?.body}}
         </span>
       </div>
+      <div class="player">
+        <audio controls>
+          <source :src="require('@/mp3/src_mp3_AcousticBlues.mp3')" type="audio/mpeg" />          
+        </audio>
+      </div>
       <div class="btn_group">
         <post-button
         button_name = "Удалить"        
@@ -52,5 +57,11 @@ span {
   display: flex;
   justify-content: space-between;
   color: #ffffff;
+}
+.player {
+  margin: 10px 0;
+}
+.player * {
+  width: 100%;
 }
 </style>
